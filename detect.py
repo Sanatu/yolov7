@@ -58,6 +58,9 @@ def detect(save_img=False):
 
     # Get names and colors
     names = model.module.names if hasattr(model, 'module') else model.names
+    print('--------------')
+    print(names)
+    names = ["oshizushi","sasazushi","temari","maki","nigiri","inari","gunkan maki"]
     colors = [[random.randint(0, 255) for _ in range(3)] for _ in names]
 
     # Run inference
